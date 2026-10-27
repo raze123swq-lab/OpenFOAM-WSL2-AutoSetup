@@ -34,4 +34,4 @@
 
 **Why no bundled tutorial or results?** The official tutorial is obtained from the user's installed OpenFOAM package at runtime. This keeps release size small and avoids redistributing upstream content or private datasets.
 
-**Is a private GitHub repository already created?** No. Current delivery is a local Git repository. The connected account search returned no visible matching repository; the direct lookup returned 404, which can also mean inaccessible. Recheck immediately before future creation.
+**Is the GitHub repository public?** Yes. The reviewed source is at [raze123swq-lab/OpenFOAM-WSL2-AutoSetup](https://github.com/raze123swq-lab/OpenFOAM-WSL2-AutoSetup). Check GitHub Actions for the latest commit before quoting a CI result.

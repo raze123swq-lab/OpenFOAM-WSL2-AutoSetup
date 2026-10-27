@@ -15,7 +15,7 @@ Prepare Windows 11 x64 + WSL2 + Ubuntu 22.04 + OpenFOAM Foundation 14, run the o
 | New project: fresh GUI launch end to end | Not yet validated; original viewer left open |
 | New installer on a clean PC, package install, restart and password handoffs | Not yet validated |
 | Second PC | **Not tested** |
-| GitHub Actions | Configuration prepared; no remote run yet |
+| GitHub Actions | Windows and Linux validation passed on GitHub; see Actions for the latest commit |
 | CFD mass balance / physical validation | **Not assessed** |
 
 This is a reproducibility candidate, not a production-certified installer. The tutorial uses `empty` front/back boundaries: it is a two-dimensional flow represented by a thin mesh, not a full 3D flow validation.

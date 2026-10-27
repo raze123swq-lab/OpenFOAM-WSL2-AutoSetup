@@ -28,7 +28,7 @@ Date: 2026-10-27, Asia/Shanghai. Host identities, absolute private paths and ori
 | Native boundary | Real WSL argv round trip: space, double quote, trailing slash, literal substitution text and Unicode | PASS in PowerShell 5.1 |
 | PowerShell | Parser, ASCII, stderr isolation, scalar return, failure propagation and argument quoting | PASS |
 | Source syntax | `bash -n`, Python AST; no Bash CRLF/BOM | PASS |
-| GitHub Actions config | YAML parsed; events, permissions, OS jobs and PowerShell shell checked | PASS configuration only; remote CI NOT RUN |
+| GitHub Actions config | YAML parsed; events, permissions, OS jobs and PowerShell shell checked | PASS; first remote run succeeded on commit `be681c0` (run 40526077817). Check the latest commit separately. |
 
 New ParaView render receipt: time=285, cells=12225, color=U Magnitude, scalar_bar=true, velocity range approximately 0.00636788 to 10.18406837. This receipt explicitly retains `gui_visual_acceptance=required`. An API render is not a desktop screenshot.
 
@@ -41,7 +41,7 @@ During development, tests exposed and corrected: quoted WSL option parsing, a Po
 3. Administrator/password/reboot interactions: implemented prompts, not executed end to end.
 4. Pending-restart gate: observed on this host; mutating orchestration correctly stops. Read-only checks allowed. No restart performed.
 5. New GUI process creation and full installer success path: original GUI left running; new fresh-launch branch and automatic shortcut branch were not exercised as a whole because of the restart gate.
-6. Remote GitHub Actions, repository publication and Release: not performed.
+6. GitHub repository is Public. No tagged GitHub Release has been created. Later commits require their own Actions result.
 7. Physical validity, conservation and mesh independence: outside this deployment acceptance.
 
 ## Repeatable real-host checklist

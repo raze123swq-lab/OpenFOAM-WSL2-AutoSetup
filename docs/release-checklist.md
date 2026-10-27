@@ -1,16 +1,16 @@
 # Release preparation / 发布准备清单
 
-MIT, repository name and public scope are owner-approved. Consult the actual remote for publication status; this checklist does not assert a Release or successful remote CI run.
+MIT, repository name and public scope are owner-approved. The GitHub repository is Public. The first remote Actions run passed on commit `be681c0`; check the latest commit separately. No tagged Release has been created.
 
 ## Before publication
 
 - [x] Owner confirms repository name, public scope, license and copyright holder.
 - [x] Add the approved LICENSE and update both READMEs.
-- [ ] Recheck connected account for an existing repository immediately before creation. Current search found none visible; direct lookup returned 404, which is not proof of nonexistence for inaccessible repositories.
-- [ ] Create a private repository first; no force push or overwrite of an existing repository.
+- [x] Recheck connected account and exact repository name before creation.
+- [x] Create a private repository first; no force push or overwrite. Then make it Public after upload and scan.
 - [ ] Run static tests, fixtures and release scan on the exact proposed commit.
 - [ ] Have an owner review the file manifest and privacy scan; pattern scans cannot prove absence of secrets.
-- [ ] Execute GitHub Actions; do not report local tests as remote CI success.
+- [x] Execute GitHub Actions on the first uploaded commit; Windows and Linux jobs passed. Check any subsequent commit again.
 - [ ] Validate clean Windows provisioning, first-run account/password interaction, pending-restart handoff and resume on a second PC.
 - [ ] Validate new GUI launch and full window contents on a real Windows host.
 - [ ] Review physical CFD acceptance separately if making numerical accuracy claims.
