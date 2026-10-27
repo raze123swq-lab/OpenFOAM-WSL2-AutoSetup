@@ -1,11 +1,11 @@
 # Release preparation / 发布准备清单
 
-This candidate is local only. No remote repository, public visibility change, tag or GitHub Release has been created.
+MIT, repository name and public scope are owner-approved. Consult the actual remote for publication status; this checklist does not assert a Release or successful remote CI run.
 
 ## Before publication
 
-- [ ] Owner confirms repository name, public scope, license and copyright holder.
-- [ ] Add the approved LICENSE and update both READMEs.
+- [x] Owner confirms repository name, public scope, license and copyright holder.
+- [x] Add the approved LICENSE and update both READMEs.
 - [ ] Recheck connected account for an existing repository immediately before creation. Current search found none visible; direct lookup returned 404, which is not proof of nonexistence for inaccessible repositories.
 - [ ] Create a private repository first; no force push or overwrite of an existing repository.
 - [ ] Run static tests, fixtures and release scan on the exact proposed commit.
@@ -24,7 +24,7 @@ Only Git-tracked generic code, documentation, tests, workflow YAML and placehold
 
 | Risk | Status / mitigation |
 |---|---|
-| License not selected | Public release blocked; no LICENSE generated prematurely |
+| License scope | MIT approved for new code/docs/tests; upstream software remains separately licensed |
 | No second-PC evidence | Explicitly unverified in both READMEs |
 | Clean install branch not executed | Current machine already installed; no reinstall performed |
 | Pending Windows restart | Installation gate tested to stop; no restart performed |

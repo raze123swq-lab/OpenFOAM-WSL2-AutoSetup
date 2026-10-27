@@ -1,6 +1,6 @@
 # OpenFOAM-WSL2-AutoSetup
 
-[中文](README.zh-CN.md) · **Pre-release / license decision pending / local repository only**
+[中文](README.zh-CN.md) · **Pre-release candidate** · [MIT License](LICENSE)
 
 Prepare Windows 11 x64 + WSL2 + Ubuntu 22.04 + OpenFOAM Foundation 14, run the official `incompressibleFluid/pitzDailySteady` tutorial in an isolated Linux directory, and view the final U Magnitude field in ParaView through WSLg.
 
@@ -69,4 +69,4 @@ Fixture tests do not run CFD. Host commands do. A successful process launch is n
 
 Installation follows the [OpenFOAM Foundation Ubuntu 14 instructions](https://openfoam.org/download/14-ubuntu/) and [Microsoft WSL installation instructions](https://learn.microsoft.com/en-us/windows/wsl/install), checked on 2026-10-27. This project does not redistribute OpenFOAM, ParaView, WSL, installers or tutorial files. The tutorial is copied from the locally installed OpenFOAM package at runtime. Upstream software retains its own licenses.
 
-MIT is proposed for the newly authored automation code, subject to owner confirmation. **No LICENSE has been granted yet; do not publish or label this repository MIT-licensed until that decision is recorded.**
+The newly authored code, tests and documentation use the [MIT License](LICENSE), copyright 2026 raze123swq-lab. Upstream software retains its own licensing.

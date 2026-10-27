@@ -1,6 +1,6 @@
 # OpenFOAM-WSL2-AutoSetup
 
-[English](README.md) · **预发布准备版，许可证待确认，目前仅为本地仓库**
+[English](README.md) · **预发布候选版** · [MIT 许可证](LICENSE)
 
 为 Windows 11 x64 用户整理 WSL2 + Ubuntu 22.04 + OpenFOAM Foundation 14 的部署流程，在独立 Linux 目录运行官方 `pitzDailySteady` 算例，并通过 WSLg 在 Windows 桌面显示最终速度云图。
 
@@ -59,4 +59,4 @@ Linux 单元测试与语法检查见英文 README。GitHub Actions 只执行静�
 
 只准备新编写的通用脚本、文档、测试与 CI 配置。原始日志、私人用户名、工程配置、求解结果、安装包、WSL 虚拟磁盘均不进入仓库。运行目录必须留在仓库之外。
 
-建议新自动化代码采用 MIT，但须由所有者确认，当前没有 LICENSE，不应对外宣称已经以 MIT 开源。OpenFOAM、ParaView 等上游软件保留各自许可，仓库不再分发它们。
+新编写的代码、测试与文档经所有者确认采用 MIT，版权署名为 raze123swq-lab。OpenFOAM、ParaView 等上游软件保留各自许可，仓库不再分发它们。

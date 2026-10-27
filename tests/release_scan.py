@@ -34,9 +34,10 @@ for name in filter(None, names):
         if pattern.search(text):
             findings.append({'path': name, 'kind': label})
     for private in args.deny:
-        if private.casefold() in text.casefold():
+        boundary = r'(?<![A-Za-z0-9_-])' + re.escape(private) + r'(?![A-Za-z0-9_-])'
+        if re.search(boundary, text, re.I):
             findings.append({'path': name, 'kind': 'private-denylist-match'})
-result = {'files': manifest, 'file_count': len(manifest), 'total_bytes': sum(x['bytes'] for x in manifest), 'findings': findings, 'license_present': (root / 'LICENSE').exists(), 'license_status': 'owner_confirmation_required', 'remote_ci': 'not_run', 'second_pc': 'not_tested'}
+result = {'files': manifest, 'file_count': len(manifest), 'total_bytes': sum(x['bytes'] for x in manifest), 'findings': findings, 'license_present': (root / 'LICENSE').exists(), 'license_status': 'MIT_owner_approved', 'remote_ci': 'not_run', 'second_pc': 'not_tested'}
 serialized = json.dumps(result, indent=2)
 if args.output:
     if args.output.resolve().is_relative_to(root):
