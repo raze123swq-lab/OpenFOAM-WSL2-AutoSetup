@@ -1,0 +1,29 @@
+name: Static and fixture validation
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Windows PowerShell 5.1 syntax and native process tests
+        shell: powershell
+        run: .\tests\Test-Static.ps1
+  linux:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Bash and Python syntax
+        run: python3 tests/check_sources.py
+      - name: Repeat and failure recovery fixtures (not a CFD solver test)
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
+# WSL2 provisioning, apt installation, CFD and WSLg visual acceptance require
+# a real Windows 11 host. Never run privileged installation on untrusted PRs.

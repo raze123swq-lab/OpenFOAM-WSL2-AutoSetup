@@ -1,0 +1,7 @@
+{
+  "distro": "Ubuntu-22.04",
+  "user": "cfd",
+  "case": "/home/cfd/OpenFOAM/autosetup14/pitzDailySteady/attempt-REPLACE/case",
+  "reports": "/mnt/d/OpenFOAM-Work/reports",
+  "viewer": "/mnt/d/OpenFOAM-WSL2-AutoSetup/scripts/linux/view.py"
+}

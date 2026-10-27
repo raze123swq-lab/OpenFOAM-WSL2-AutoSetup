@@ -1,0 +1,25 @@
+# Runtime output and local identity/configuration must stay outside the repository.
+*.log
+*.lnk
+*.vhd
+*.vhdx
+*.iso
+*.exe
+*.msi
+*.deb
+*.zip
+*.pem
+*.key
+.env
+.env.*
+paraview.json
+paraview-*.json
+runtime/
+logs/
+reports/
+__pycache__/
+*.pyc
+postProcessing/
+processor*/
+.DS_Store
+.vscode/
